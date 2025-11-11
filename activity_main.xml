@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+    <!-- TOP BAR -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mascot Chat"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#222222"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your mascot is ready to chat 💬"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+
+    <!-- INPUT BAR (fixed bottom) -->
+    <RelativeLayout
+        android:id="@+id/inputBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:minWidth="72dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:backgroundTint="#6C63FF"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:hint="Type a message..."
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:layout_toStartOf="@id/btnSend"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"/>
+    </RelativeLayout>
+
+    <!-- MESSAGES LIST (between top and bottom) -->
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/inputBar"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:dividerHeight="8dp"
+        android:background="@color/black"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+</RelativeLayout>

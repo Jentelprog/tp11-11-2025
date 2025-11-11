@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/echoRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitleEcho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preview message"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#222222"/>
+
+    <TextView
+        android:id="@+id/tvPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleEcho"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="#222222"
+        android:background="@drawable/rounded_card"/>
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Return"
+        android:textAllCaps="false"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/btnReturn"
+        android:layout_marginEnd="8dp"
+        android:text="Cancel"
+        android:textAllCaps="false"/>
+</RelativeLayout>
